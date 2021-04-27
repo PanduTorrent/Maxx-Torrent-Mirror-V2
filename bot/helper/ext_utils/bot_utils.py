@@ -13,8 +13,8 @@ URL_REGEX = r"(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+"
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "<📤UploadinG To TD...📬"
-    STATUS_DOWNLOADING = "<b>📥DownloadinG to My Server..📬</b>"
+    STATUS_UPLOADING = "<📤Uploading To TD..."
+    STATUS_DOWNLOADING = "<b>📥Downloading to My Server..</b>"
     STATUS_WAITING = "<b>Queued 📝</b>"
     STATUS_FAILED = "Failed 🚫. Cleaning download"
     STATUS_CANCELLED = "<b>Cancelled ❎</b>"
@@ -107,6 +107,7 @@ def get_readable_message():
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 msg += f"\n○<b>CANCEL</b> <code>/cancel {download.gid()}</code>"
+                msg += f"𝐁𝐎𝐓 𝐌𝐀𝐃𝐄 𝐁𝐘 @𝐩𝐢𝐞_𝐲𝐮𝐬𝐡"
             msg += "\n\n"
         return msg
 
